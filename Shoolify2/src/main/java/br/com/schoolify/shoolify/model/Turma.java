@@ -22,9 +22,9 @@ public class Turma {
     @NotNull
     private String descricao;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "turmas")
     private Set<DiscProfTurma> discProfTurmas = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "participantes")
     private Set<TurmaPai> turmaPais = new HashSet<>();
 }
