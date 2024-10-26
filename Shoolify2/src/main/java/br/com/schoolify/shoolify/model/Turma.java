@@ -25,6 +25,6 @@ public class Turma {
     @ManyToMany(mappedBy = "turmas")
     private Set<DiscProfTurma> discProfTurmas = new HashSet<>();
 
-    @ManyToMany(mappedBy = "participantes")
+    @ManyToMany(mappedBy = "turmas")
     private Set<TurmaPai> turmaPais = new HashSet<>();
 }
