@@ -30,7 +30,11 @@ public class DiscProfTurma {
     @JoinColumn (name = "usuario_id")
     private Usuario usuario;
 
+    
     @ManyToMany
+    @JoinTable(name = "tb_discprofturma_turma",
+            joinColumns = @JoinColumn(name = "discprofturma_id"),
+            inverseJoinColumns = @JoinColumn(name = "turma_id"))
     private Set<Turma> turmas = new HashSet<>();
 
     @ManyToMany
