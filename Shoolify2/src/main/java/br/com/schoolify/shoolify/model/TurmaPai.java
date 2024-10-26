@@ -19,7 +19,7 @@ public class TurmaPai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany(mappedBy = "turmapais")
+    @ManyToMany(mappedBy = "turmaPais")
     private Set<Usuario> usuarios = new HashSet<>();
 
     @ManyToMany
