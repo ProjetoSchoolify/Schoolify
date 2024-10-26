@@ -38,6 +38,9 @@ public class DiscProfTurma {
     private Set<Turma> turmas = new HashSet<>();
 
     @ManyToMany
+    @JoinTable(name = "tb_discprofturma_disciplina",
+            joinColumns = @JoinColumn(name = "discprofturma_id"),
+            inverseJoinColumns = @JoinColumn(name = "disciplina_id"))
     private Set<Disciplina> disciplinas = new HashSet<>();
 
 }
