@@ -47,5 +47,8 @@ public class Usuario {
     private TipoUsuario tipoUsuario;
 
     @ManyToMany
+    @JoinTable(name = "tb_usuario_turmapai",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "turmapai_id"))
     private Set<TurmaPai> turmaPais = new HashSet<>();
 }
