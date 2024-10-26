@@ -19,10 +19,13 @@ public class TurmaPai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "turmapais")
     private Set<Usuario> usuarios = new HashSet<>();
 
     @ManyToMany
+    @JoinTable(name = "tb_turmapai_turma",
+            joinColumns = @JoinColumn(name = "turmapai_id"),
+            inverseJoinColumns = @JoinColumn(name = "turma_id"))
     private Set<Turma> turmas = new HashSet<>();
     
 }
