@@ -24,6 +24,6 @@ public class Disciplina {
     @NotNull
     private String imgUrl;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "disciplinas")
     private Set<DiscProfTurma> discProfTurmas = new HashSet<>();
 }
